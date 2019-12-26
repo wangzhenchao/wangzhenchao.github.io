@@ -2,8 +2,7 @@
 
 menu:
   主页: /
-  随笔: /tags/随笔/
-  日记: /tags/日记/
+  随笔: /categories/随笔/
 
 # SubNav
 subnav:
