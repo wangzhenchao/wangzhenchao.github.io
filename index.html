@@ -209,7 +209,7 @@
 <p>做出比武架势，双方击掌</p>
 <p><span style="color: #0000EE">严：拈花指</span></p>
 <p><span style="color:  #B22222">超：龙抓手</span></p>
-<p><span style="color: #0000EE">严倒地，“你怎么这么厉害？”</span></p>
+<p><span style="color: #0000EE">严倒地，“你的龙抓手果然不一般？”</span></p>
 <p><span style="color:  #B22222">超：我是vip啦。</span></p>
 <p>部下丢下元宝扶走鸠摩智。乔峰看对方退场，站场中对观众</p>
 <p><span style="color:  #B22222">超：很便宜的啦，首冲即送神功护体。</span></p>
@@ -307,6 +307,11 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
       
       
 	<div class="article-category tagcloud">
@@ -324,6 +329,341 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/12/27/%E9%B8%A0%E6%91%A9%E6%99%BA%E6%89%93%E6%AE%8B%E4%B9%94%E5%B3%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-接口文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/03/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">接口文档</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/03/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class="archive-article-date">
+  	<time datetime="2020-01-03T06:26:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="游戏研发接口文档"><a href="#游戏研发接口文档" class="headerlink" title="游戏研发接口文档"></a>游戏研发接口文档</h1><table>
+<thead>
+<tr>
+<th align="left">日期</th>
+<th align="left">版本</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">2020年1月3日</td>
+<td align="left">3.0</td>
+<td align="left">王振超</td>
+</tr>
+</tbody></table>
+<h2 id="区服信息"><a href="#区服信息" class="headerlink" title="区服信息"></a>区服信息</h2><ul>
+<li>描述：由游戏方提供用户查询游戏区服列表信息</li>
+<li>地址：游戏方提供</li>
+<li>请求：post</li>
+<li>参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">是否为空</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">game</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">游戏标识</td>
+</tr>
+<tr>
+<td align="left">serverId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">专服号，没有传0</td>
+</tr>
+<tr>
+<td align="left">ts</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">时间戳</td>
+</tr>
+<tr>
+<td align="left">sign</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">见签名规则</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;errno&quot;: 1000, &#x2F;&#x2F;状态码</span><br><span class="line">	&quot;errmsg&quot;: &quot;success&quot;,&#x2F;&#x2F;状态说明</span><br><span class="line">	&quot;data&quot;: [</span><br><span class="line">                &#123;</span><br><span class="line">                &quot;serverId&quot;:&quot;123&quot;,	&#x2F;&#x2F;专服号，没有则传0，字符串</span><br><span class="line">                &quot;zoneId&quot;:&quot;321&quot;,	&#x2F;&#x2F;区服id，字符串</span><br><span class="line">                &quot;zoneName&quot;:&quot;雄霸天下&quot;,	&#x2F;&#x2F;区服名称，字符串</span><br><span class="line">                &quot;createTime&quot;:&quot;1528167511&quot;,	&#x2F;&#x2F;开服时间，时间戳（精确到秒）</span><br><span class="line">                ...</span><br><span class="line">                &#125;,&#123;...&#125;,...</span><br><span class="line">		]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="角色信息"><a href="#角色信息" class="headerlink" title="角色信息"></a>角色信息</h2><ul>
+<li>描述：由游戏方提供角色查询信息</li>
+<li>地址：游戏方提供</li>
+<li>请求：post</li>
+<li>参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">是否为空</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">game</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">游戏标识</td>
+</tr>
+<tr>
+<td align="left">serverId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">专服号，没有传0</td>
+</tr>
+<tr>
+<td align="left">zoneId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">区服号</td>
+</tr>
+<tr>
+<td align="left">uid</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">账号</td>
+</tr>
+<tr>
+<td align="left">ts</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">时间戳</td>
+</tr>
+<tr>
+<td align="left">sign</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">签名</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;errno&quot;: 1000, &#x2F;&#x2F;状态码</span><br><span class="line">	&quot;errmsg&quot;: &quot;success&quot;,&#x2F;&#x2F;状态说明</span><br><span class="line">	&quot;data&quot;: [</span><br><span class="line">                &#123;</span><br><span class="line">                &quot;serverId&quot;:&quot;123&quot;,	&#x2F;&#x2F;专服号，没有则传0，字符串</span><br><span class="line">                &quot;zoneId&quot;:&quot;321&quot;,	&#x2F;&#x2F;区服id，字符串</span><br><span class="line">                &quot;zoneName&quot;:&quot;雄霸天下&quot;,	&#x2F;&#x2F;区服名称，字符串</span><br><span class="line">                &quot;roleId&quot;:&quot;100001&quot;,	</span><br><span class="line">                &quot;roleName&quot;:&quot;wale&quot;,	</span><br><span class="line">                &quot;roleLevel&quot;:&quot;188&quot;,	</span><br><span class="line">                &quot;groupName&quot;:&quot;雄霸天下&quot;,	&#x2F;&#x2F;所属公会（帮派）名称</span><br><span class="line">			   &quot;groupPos&quot;:&quot;帮主&quot;,	&#x2F;&#x2F;所属公会（帮派）职位</span><br><span class="line">                &quot;createTime&quot;:&quot;1528167511&quot;,	&#x2F;&#x2F;开服时间，时间戳（精确到秒）</span><br><span class="line">                &#125;,&#123;...&#125;,...</span><br><span class="line">		]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="透传字段接口"><a href="#透传字段接口" class="headerlink" title="透传字段接口"></a>透传字段接口</h2><ul>
+<li>描述：由游戏方提供透传字段信息</li>
+<li>地址：游戏方提供</li>
+<li>请求：post</li>
+<li>参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">是否为空</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">game</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">游戏标识</td>
+</tr>
+<tr>
+<td align="left">userId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">用户Id</td>
+</tr>
+<tr>
+<td align="left">roleId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">角色Id</td>
+</tr>
+<tr>
+<td align="left">serverCode</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">专服号，没有传0</td>
+</tr>
+<tr>
+<td align="left">goodsId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">商品Id</td>
+</tr>
+<tr>
+<td align="left">amount</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">金额（人民币分）</td>
+</tr>
+<tr>
+<td align="left">ip</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">ip</td>
+</tr>
+<tr>
+<td align="left">timestamp</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">时间戳</td>
+</tr>
+<tr>
+<td align="left">sign</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">签名</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;errno&quot;:1000,&#x2F;&#x2F;状态码</span><br><span class="line">	&quot;errmsg&quot;:&quot;success&quot;,&#x2F;&#x2F;状态说明</span><br><span class="line">	&quot;data&quot;:&#123;&quot;orderId&quot;:&quot;983271&quot;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+</li>
+</ul>
+<h2 id="在线用户"><a href="#在线用户" class="headerlink" title="在线用户"></a>在线用户</h2><ul>
+<li>描述：提供游戏在线用户信息查询</li>
+<li>地址：游戏方提供</li>
+<li>请求：post</li>
+<li>参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">类型</th>
+<th align="left">是否为空</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">game</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">游戏标识</td>
+</tr>
+<tr>
+<td align="left">serverId</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">专服号，没有传0</td>
+</tr>
+<tr>
+<td align="left">ts</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">时间戳</td>
+</tr>
+<tr>
+<td align="left">sign</td>
+<td align="left">string</td>
+<td align="left">否</td>
+<td align="left">见签名规则</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;errno&quot;: 1000,</span><br><span class="line">	&quot;errmsg&quot;: &quot;success&quot;,</span><br><span class="line">	&quot;data&quot;: [&#123;</span><br><span class="line">                &quot;ts&quot;: &quot;1528167511&quot;,</span><br><span class="line">                &quot;serverId&quot;: &quot;10000&quot;,</span><br><span class="line">                &quot;zoneId&quot;:&quot;100001&quot;,</span><br><span class="line">                &quot;zoneName&quot;: &quot;qufu1&quot;,</span><br><span class="line">                &quot;olNum&quot;: &quot;89&quot;</span><br><span class="line">                &#125;, &#123;</span><br><span class="line">                &quot;ts&quot;: &quot;1528167511&quot;,</span><br><span class="line">                &quot;serverId&quot;: &quot;10000&quot;,</span><br><span class="line">                &quot;zoneId&quot;:&quot;100002&quot;</span><br><span class="line">                &quot;zoneName&quot;: &quot;qufu2&quot;,</span><br><span class="line">                &quot;olNum&quot;: &quot;5&quot;</span><br><span class="line">            &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="签名规则"><a href="#签名规则" class="headerlink" title="签名规则"></a>签名规则</h2><ul>
+<li><p>描述：将所有请求参数按照参数键名升序排序，再按照顺序以$key1=$value2&amp;$key2=$value2&amp;…的格式拼接所有参数（sign除外），最后再拼接上麟游提供的游戏参数中的signKey进行md5。详情见方法实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public  function getSign($signArr &#x3D; array(), $signKey)</span><br><span class="line">&#123;           </span><br><span class="line">    ksort($signArr);                                         </span><br><span class="line">    $params &#x3D; array();                               </span><br><span class="line">    foreach ($signArr as $key &#x3D;&gt; $value)             </span><br><span class="line">    &#123;                                                </span><br><span class="line">        if(in_array($key, array(&quot;sign&quot;)))            </span><br><span class="line">        &#123;                                            </span><br><span class="line">            continue;                                </span><br><span class="line">        &#125;                                            </span><br><span class="line">        $params[] &#x3D; $key.&#39;&#x3D;&#39;.$value;                          </span><br><span class="line">    &#125;                                                </span><br><span class="line">    $signStr &#x3D; implode(&quot;&amp;&quot;, $params) .$signKey;        </span><br><span class="line">    return strtoupper(md5($signStr));                </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/文档//" class="article-tag-list-link color3">文档</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/03/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">展开全文 >></a>
         </p>
       
 
@@ -540,7 +880,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Walle
+    		&copy; 2020 Walle
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
